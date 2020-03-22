@@ -20,7 +20,7 @@ RUN git clone https://github.com/ralbear/IMAPbackup.git
 RUN rm -rf /var/lib/apt/lists/*
 
 # Run list command
-RUN cd IMAPbackup && python imapgrab.py -l -s $MAILHOST -u $MAILUSER -p $MAILPASSWORD
+# RUN cd IMAPbackup && python imapgrab.py -l -s $MAILHOST -u $MAILUSER -p $MAILPASSWORD
 
 # Assuming that folder is mount to /mnt, create mail-output folder
 RUN mkdir -p /mnt/mail
