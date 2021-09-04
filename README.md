@@ -1,5 +1,7 @@
 # docker_imapgrab
 
+[![Build Status](https://github.ci.maxkratz.com/api/badges/maxkratz/docker_imapgrab/status.svg)](https://github.ci.maxkratz.com/maxkratz/docker_imapgrab)
+
 *Unofficial* imapgrab Dockerfile for backing up all folders of an imap server.
 
 ## Quickstart
