@@ -11,12 +11,22 @@ repo: &repo
     repo: maxkratz/imapgrab
 
 steps:
+  - name: build-testing
+    image: plugins/docker
+    settings:
+      <<: *repo
+      tags: testing
+      <<: *auth
+    when:
+      branch:
+        exclude:
+        - main
   - name: build-latest
     image: plugins/docker
     settings:
-        <<: *repo
-        tags: latest
-        <<: *auth
+      <<: *repo
+      tags: latest
+      <<: *auth
     when:
-        branch:
-            - main
+      branch:
+        - main
