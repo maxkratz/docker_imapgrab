@@ -37,7 +37,7 @@ Creates a backup of all files and folders of the mailbox **user@example.net** wi
 
 ## Dockerfile
 The Dockerfile can be found at:
-[https://github.com/maxkratz/docker_imapgrab/blob/master/Dockerfile](https://github.com/maxkratz/docker_imapgrab/blob/master/Dockerfile)
+[https://github.com/maxkratz/docker_imapgrab/blob/main/Dockerfile](https://github.com/maxkratz/docker_imapgrab/blob/main/Dockerfile)
 
 ## What gets installed in this container?
 The following packages are installed within this docker container:
