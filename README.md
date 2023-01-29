@@ -1,6 +1,6 @@
 # docker_imapgrab
 
-[![Build Status](https://github.ci.maxkratz.com/api/badges/maxkratz/docker_imapgrab/status.svg)](https://github.ci.maxkratz.com/maxkratz/docker_imapgrab)
+[![Build Docker images](https://github.com/maxkratz/docker_imapgrab/actions/workflows/build.yml/badge.svg)](https://github.com/maxkratz/docker_imapgrab/actions/workflows/build.yml)
 
 *Unofficial* imapgrab Dockerfile for backing up all folders of an imap server.
 
@@ -37,7 +37,7 @@ Creates a backup of all files and folders of the mailbox **user@example.net** wi
 
 ## Dockerfile
 The Dockerfile can be found at:
-[https://github.com/maxkratz/docker_imapgrab/blob/master/Dockerfile](https://github.com/maxkratz/docker_imapgrab/blob/master/Dockerfile)
+[https://github.com/maxkratz/docker_imapgrab/blob/main/Dockerfile](https://github.com/maxkratz/docker_imapgrab/blob/main/Dockerfile)
 
 ## What gets installed in this container?
 The following packages are installed within this docker container:
