@@ -25,13 +25,13 @@ RUN sudo git clone https://github.com/ralbear/IMAPbackup.git
 RUN sudo rm -rf /var/lib/apt/lists/*
 
 # Run list command
-# RUN cd IMAPbackup && sudo python3 imapgrab38.py -l -s $MAILHOST -u $MAILUSER -p $MAILPASSWORD
+# RUN cd IMAPbackup && sudo python3 imapgrab.py -l -s $MAILHOST -u $MAILUSER -p $MAILPASSWORD
 
 # Assuming that folder is mount to /mnt, create mail-output folder
 RUN sudo mkdir -p /mnt/mail
 
 # Check if logging is enabled
 CMD if [ "${MAILLOG}" = "TRUE" ]; \
-    then sudo mkdir -p /mnt/log && cd IMAPbackup && sudo python3 imapgrab38.py -L imapgrab -d -v -M -f /mnt/mail/$MAILFOLDER -s $MAILHOST -u $MAILUSER -p $MAILPASSWORD -m "_ALL_" >> /mnt/log/$(date +'%Y-%m-%d_%H-%M-%S')_mail-backup.log; \
-    else cd IMAPbackup && sudo python3 imapgrab38.py -L imapgrab -d -v -M -f /mnt/mail/$MAILFOLDER -s $MAILHOST -u $MAILUSER -p $MAILPASSWORD -m "_ALL_"; \
+    then sudo mkdir -p /mnt/log && cd IMAPbackup && sudo python3 imapgrab.py -L imapgrab -d -v -M -f /mnt/mail/$MAILFOLDER -s $MAILHOST -u $MAILUSER -p $MAILPASSWORD -m "_ALL_" >> /mnt/log/$(date +'%Y-%m-%d_%H-%M-%S')_mail-backup.log; \
+    else cd IMAPbackup && sudo python3 imapgrab.py -L imapgrab -d -v -M -f /mnt/mail/$MAILFOLDER -s $MAILHOST -u $MAILUSER -p $MAILPASSWORD -m "_ALL_"; \
     fi
