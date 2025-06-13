@@ -1,6 +1,6 @@
 # Use python:2
 FROM python:2
-LABEL maintainer="Max Kratz <account@maxkratz.com>"
+LABEL maintainer="Max Kratz <github@maxkratz.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update and install various packages
