@@ -3,6 +3,10 @@ FROM python:2
 LABEL maintainer="Max Kratz <github@maxkratz.com>"
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Fix Debian apt sources
+RUN sed -i 's/deb.debian.org/archive.debian.org/' /etc/apt/sources.list
+RUN sed -i 's/security.debian.org/archive.debian.org/' /etc/apt/sources.list
+
 # Update and install various packages
 RUN apt-get update -q && \
     apt-get upgrade -yq && \
